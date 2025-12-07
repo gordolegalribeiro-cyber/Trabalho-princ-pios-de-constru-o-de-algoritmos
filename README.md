@@ -8,7 +8,7 @@ Alunos: José Flavio de moraes RIbeiro matrícula:06013830
 Sistema de Cadastro de Alunos
 
    Descrição
-
+   
 Sistema de gestão de registro de estudantes criado em Python com o uso da biblioteca Pandas. O sistema possibilita o registro, consulta, modificação e exclusão de dados dos alunos, guardando essas informações em um arquivo CSV.
 
 
