@@ -35,3 +35,28 @@ def inserir_aluno(df):
     matricula = gerar_matricula(df) #Gerar matrícula automática
     print(f"Número de matrícula gerado: {matricula}")
     1
+ nome = input("Nome: ").strip()  #Coletar dados do aluno
+    rua = input("Rua: ").strip()
+    numero = input("Número: ").strip()
+    bairro = input("Bairro: ").strip()
+    cidade = input("Cidade: ").strip()
+    uf = input("UF: ").strip().upper()
+    telefone = input("Telefone: ").strip()
+    email = input("E-mail: ").strip()
+    
+    
+    novo_aluno = { #Criar dicionário com os dados
+        'Matricula': matricula,
+        'Nome': nome,
+        'Rua': rua,
+        'Numero': numero,
+        'Bairro': bairro,
+        'Cidade': cidade,
+        'UF': uf,
+        'Telefone': telefone,
+        'Email': email
+    }
+    
+    
+    df = pd.concat([df, pd.DataFrame([novo_aluno])], ignore_index=True)  #Adicionar ao DataFrame
+    
