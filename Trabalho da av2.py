@@ -6,7 +6,7 @@ ARQUIVO_ALUNOS = 'alunos.csv' #Nome do arquivo CSV
 def inicializar_arquivo():
     colunas = ['Matricula', 'Nome', 'Rua', 'Numero', 'Bairro', 'Cidade', 'UF', 'Telefone', 'Email'] #O arquivo CSV é inicializado com as colunas requeridas.
   
-if not os.path.exists(ARQUIVO_ALUNOS):
+    if not os.path.exists(ARQUIVO_ALUNOS):
         df = pd.DataFrame(columns=colunas)
         df.to_csv(ARQUIVO_ALUNOS, index=False, encoding='utf-8')
         return df
@@ -34,8 +34,8 @@ def inserir_aluno(df):
     
     matricula = gerar_matricula(df) #Gerar matrícula automática
     print(f"Número de matrícula gerado: {matricula}")
-    1
- nome = input("Nome: ").strip()  #Coletar dados do aluno
+    
+    nome = input("Nome: ").strip()  #Coletar dados do aluno
     rua = input("Rua: ").strip()
     numero = input("Número: ").strip()
     bairro = input("Bairro: ").strip()
@@ -227,7 +227,7 @@ def remover_aluno(df, matricula):   #Função para remover um aluno
 
 def menu(): #Função principal do menu 
     print("\n" + "^"*50)
-    print("Sistema de cadrasto de alunos")
+    print("Sistema de cadastro de alunos")
     print("-"*50)
     print("1 - Inserir novo aluno")
     print("2 - Pesquisar/Editar/Remover aluno")
@@ -254,7 +254,7 @@ def main():
             df, matricula = pesquisar_aluno(df)
             
             if matricula is not None:
-                print("\nopções:")
+                print("\nOpções:")
                 print("1 - Editar dados")
                 print("2 - Remover aluno")
                 print("3 - Voltar ao menu")
@@ -268,7 +268,7 @@ def main():
                 elif acao == '3':
                     continue
                 else:
-                    print("opção inválida!")
+                    print("Opção inválida!")
         
         elif opcao == '3':
             print("\nEncerrando o sistema")
@@ -276,7 +276,7 @@ def main():
             break
         
         else:
-            print("\nopção inválida! Digite 1, 2 ou 3.")
+            print("\nOpção inválida! Digite 1, 2 ou 3.")
         
         input("\nPressione Enter para continuar")
 
