@@ -1,13 +1,14 @@
-Trabalho princípios de construção de algoritmos
+Trabalho - Princípios de Construção de Algoritmos
 
-Usando blibioteca do panda 
+Utilizando a biblioteca pandas
 
-Primeira coisa que estou fazendo criar CSV
+Primeira etapa: criar arquivo CSV
 
- Começnado a cria o Dataframe 
+Criação do Dataframe
 
- criando fução  gera matricula 
+Função para gerar matrícula automática
 
- criando Dícionario sobre dados do aluno
+Estrutura de dicionário para dados do aluno
 
- Terminando de mexer na matricula começando a mexer no porco do menu
+Finalizando a parte da matrícula e iniciando o desenvolvimento do menu
+
