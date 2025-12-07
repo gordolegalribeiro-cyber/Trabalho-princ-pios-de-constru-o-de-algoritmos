@@ -224,3 +224,61 @@ def remover_aluno(df, matricula):   #Função para remover um aluno
         print("Operação cancelada.")
     
     return df
+
+def menu(): #Função principal do menu 
+    print("\n" + "^"*50)
+    print("Sistema de cadrasto de alunos")
+    print("-"*50)
+    print("1 - Inserir novo aluno")
+    print("2 - Pesquisar/Editar/Remover aluno")
+    print("3 - Sair")
+    print("~"*50)
+    
+    opcao = input("Digite a opção desejada (1-3): ").strip()
+    return opcao
+
+def main():
+    
+    print("Inicializando sistema de cadastro de alunos") #Função principal do programa
+    
+    
+    df = inicializar_arquivo() #Inicializar DataFrame
+    
+    while True:
+        opcao = menu()
+        
+        if opcao == '1':
+            df = inserir_aluno(df)
+        
+        elif opcao == '2':
+            df, matricula = pesquisar_aluno(df)
+            
+            if matricula is not None:
+                print("\nopções:")
+                print("1 - Editar dados")
+                print("2 - Remover aluno")
+                print("3 - Voltar ao menu")
+                
+                acao = input("\nDigite a opção (1-3): ").strip()
+                
+                if acao == '1':
+                    df = editar_aluno(df, matricula)
+                elif acao == '2':
+                    df = remover_aluno(df, matricula)
+                elif acao == '3':
+                    continue
+                else:
+                    print("opção inválida!")
+        
+        elif opcao == '3':
+            print("\nEncerrando o sistema")
+            print("Programa Finalizado!")
+            break
+        
+        else:
+            print("\nopção inválida! Digite 1, 2 ou 3.")
+        
+        input("\nPressione Enter para continuar")
+
+if __name__ == "__main__":
+    main()
