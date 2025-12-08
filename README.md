@@ -4,7 +4,7 @@ Trabalho prático AV2.
 Matéria: Princípios de Construção de Algoritmos (PCA)
 
 Alunos:
-José Flavio de moraes RIbeiro matrícula:06013830
+José Flavio de moraes Ribeiro matrícula:06013830
 Renan Caçador Dos Santos matrícula:06013843
 
 Sistema de Cadastro de Alunos
